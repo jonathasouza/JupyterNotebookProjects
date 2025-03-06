@@ -1,0 +1,294 @@
+2024-12-20 00:01:12,739 - INFO - Starting trading strategy optimization
+2024-12-20 00:01:12,742 - INFO - 
+=== Starting Iteration 1/5 ===
+2024-12-20 00:01:12,744 - INFO - Reading current strategy code...
+2024-12-20 00:01:12,748 - INFO - Optimizing strategy...
+2024-12-20 00:01:59,111 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2024-12-20 00:01:59,119 - INFO - Writing optimized strategy...
+2024-12-20 00:01:59,121 - INFO - Executing strategy...
+2024-12-20 00:01:59,179 - ERROR - Error executing strategy: 'numpy.ndarray' object has no attribute 'fillna'
+2024-12-20 00:01:59,183 - ERROR - Traceback (most recent call last):
+  File "C:\Users\jonat\AppData\Local\Temp\ipykernel_20160\3783800957.py", line 166, in execute_strategy
+    results = trader.strategy.process_month(df)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\jonat\Asimov\Final Project\OptimalAIstrategy.py", line 69, in process_month
+    return self.calculate_monthly_metrics(monthly_trades)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\jonat\Asimov\Final Project\OptimalAIstrategy.py", line 114, in calculate_monthly_metrics
+    ).fillna(0)
+      ^^^^^^
+AttributeError: 'numpy.ndarray' object has no attribute 'fillna'. Did you mean: 'fill'?
+
+2024-12-20 00:01:59,186 - WARNING - Strategy execution produced no results
+2024-12-20 00:01:59,188 - INFO - 
+=== Starting Iteration 2/5 ===
+2024-12-20 00:01:59,189 - INFO - Reading current strategy code...
+2024-12-20 00:01:59,191 - INFO - Optimizing strategy...
+2024-12-20 00:07:20,885 - INFO - Starting trading strategy optimization
+2024-12-20 00:07:20,887 - INFO - 
+=== Starting Iteration 1/5 ===
+2024-12-20 00:07:20,888 - INFO - Reading current strategy code...
+2024-12-20 00:07:20,890 - INFO - Optimizing strategy...
+2024-12-20 00:13:46,020 - INFO - Starting trading strategy optimization
+2024-12-20 00:13:46,023 - INFO - 
+=== Starting Iteration 1/5 ===
+2024-12-20 00:13:46,024 - INFO - Reading current strategy code...
+2024-12-20 00:13:46,027 - INFO - Optimizing strategy...
+2024-12-20 00:14:58,409 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2024-12-20 00:14:58,571 - INFO - Writing optimized strategy...
+2024-12-20 00:14:58,574 - INFO - Executing strategy...
+2024-12-20 00:14:59,754 - ERROR - Error executing strategy: 'numpy.float64' object has no attribute 'rolling'
+2024-12-20 00:14:59,760 - ERROR - Traceback (most recent call last):
+  File "C:\Users\jonat\AppData\Local\Temp\ipykernel_17920\2623509180.py", line 182, in execute_strategy
+    results = trader.strategy.process_month(df)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\jonat\Asimov\Final Project\OptimalAIstrategy.py", line 129, in process_month
+    entry_signal = self.check_entry_conditions(current_row, prev_row)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\jonat\Asimov\Final Project\OptimalAIstrategy.py", line 166, in check_entry_conditions
+    volume_signal = row['volume'] > row['volume'].rolling(20).mean()
+                                    ^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'numpy.float64' object has no attribute 'rolling'
+
+2024-12-20 00:14:59,762 - WARNING - Strategy execution produced no results
+2024-12-20 00:14:59,763 - INFO - 
+=== Starting Iteration 2/5 ===
+2024-12-20 00:14:59,765 - INFO - Reading current strategy code...
+2024-12-20 00:14:59,766 - INFO - Optimizing strategy...
+2024-12-20 21:44:23,066 - INFO - Starting trading strategy optimization
+2024-12-20 21:44:23,069 - INFO - Establishing baseline performance...
+2024-12-20 21:44:23,076 - ERROR - Error executing strategy: unindent does not match any outer indentation level (OptimalAIstrategy.py, line 152)
+2024-12-20 21:44:23,077 - ERROR - Traceback (most recent call last):
+  File "C:\Users\jonat\AppData\Local\Temp\ipykernel_12404\15729764.py", line 70, in execute_strategy
+    spec.loader.exec_module(optimized_strategy)
+  File "<frozen importlib._bootstrap_external>", line 991, in exec_module
+  File "<frozen importlib._bootstrap_external>", line 1129, in get_code
+  File "<frozen importlib._bootstrap_external>", line 1059, in source_to_code
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "C:\Users\jonat\Asimov\Final Project\OptimalAIstrategy.py", line 152
+    def check_entry_conditions(self, row: pd.Series, prev_row: pd.Series) -> bool:
+                                                                                  ^
+IndentationError: unindent does not match any outer indentation level
+
+2024-12-20 21:44:23,079 - ERROR - Failed to establish baseline performance
+2024-12-20 21:52:09,702 - INFO - Starting trading strategy optimization
+2024-12-20 21:52:09,705 - INFO - Establishing baseline performance...
+2024-12-20 21:52:09,709 - ERROR - Error executing strategy: unindent does not match any outer indentation level (OptimalAIstrategy.py, line 152)
+2024-12-20 21:52:09,711 - ERROR - Traceback (most recent call last):
+  File "C:\Users\jonat\AppData\Local\Temp\ipykernel_24316\15729764.py", line 70, in execute_strategy
+    spec.loader.exec_module(optimized_strategy)
+  File "<frozen importlib._bootstrap_external>", line 991, in exec_module
+  File "<frozen importlib._bootstrap_external>", line 1129, in get_code
+  File "<frozen importlib._bootstrap_external>", line 1059, in source_to_code
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "C:\Users\jonat\Asimov\Final Project\OptimalAIstrategy.py", line 152
+    def check_entry_conditions(self, row: pd.Series, prev_row: pd.Series) -> bool:
+                                                                                  ^
+IndentationError: unindent does not match any outer indentation level
+
+2024-12-20 21:52:09,713 - ERROR - Failed to establish baseline performance
+2024-12-20 21:53:27,800 - INFO - Starting trading strategy optimization
+2024-12-20 21:53:27,804 - INFO - Establishing baseline performance...
+2024-12-20 21:53:27,808 - ERROR - Error executing strategy: unindent does not match any outer indentation level (OptimalAIstrategy.py, line 152)
+2024-12-20 21:53:27,810 - ERROR - Traceback (most recent call last):
+  File "C:\Users\jonat\AppData\Local\Temp\ipykernel_1440\15729764.py", line 70, in execute_strategy
+    spec.loader.exec_module(optimized_strategy)
+  File "<frozen importlib._bootstrap_external>", line 991, in exec_module
+  File "<frozen importlib._bootstrap_external>", line 1129, in get_code
+  File "<frozen importlib._bootstrap_external>", line 1059, in source_to_code
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "C:\Users\jonat\Asimov\Final Project\OptimalAIstrategy.py", line 152
+    def check_entry_conditions(
+                               ^
+IndentationError: unindent does not match any outer indentation level
+
+2024-12-20 21:53:27,812 - ERROR - Failed to establish baseline performance
+2024-12-20 22:04:21,755 - INFO - Starting trading strategy optimization
+2024-12-20 22:04:21,759 - INFO - Establishing baseline performance...
+2024-12-20 22:04:21,763 - ERROR - Error executing strategy: unexpected indent (OptimalAIstrategy.py, line 157)
+2024-12-20 22:04:21,764 - ERROR - Traceback (most recent call last):
+  File "C:\Users\jonat\AppData\Local\Temp\ipykernel_19728\15729764.py", line 70, in execute_strategy
+    spec.loader.exec_module(optimized_strategy)
+  File "<frozen importlib._bootstrap_external>", line 991, in exec_module
+  File "<frozen importlib._bootstrap_external>", line 1129, in get_code
+  File "<frozen importlib._bootstrap_external>", line 1059, in source_to_code
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "C:\Users\jonat\Asimov\Final Project\OptimalAIstrategy.py", line 157
+    volume_ma = self.volume_series.rolling(20).mean()
+IndentationError: unexpected indent
+
+2024-12-20 22:04:21,766 - ERROR - Failed to establish baseline performance
+2024-12-20 22:09:53,710 - INFO - Starting trading strategy optimization
+2024-12-20 22:09:53,714 - INFO - Establishing baseline performance...
+2024-12-20 22:09:53,719 - ERROR - Error executing strategy: unexpected indent (OptimalAIstrategy.py, line 157)
+2024-12-20 22:09:53,720 - ERROR - Traceback (most recent call last):
+  File "C:\Users\jonat\AppData\Local\Temp\ipykernel_26256\15729764.py", line 70, in execute_strategy
+    spec.loader.exec_module(optimized_strategy)
+  File "<frozen importlib._bootstrap_external>", line 991, in exec_module
+  File "<frozen importlib._bootstrap_external>", line 1129, in get_code
+  File "<frozen importlib._bootstrap_external>", line 1059, in source_to_code
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "C:\Users\jonat\Asimov\Final Project\OptimalAIstrategy.py", line 157
+    volume_ma = self.volume_series.rolling(20).mean()
+IndentationError: unexpected indent
+
+2024-12-20 22:09:53,722 - ERROR - Failed to establish baseline performance
+2024-12-20 22:18:59,981 - INFO - Starting trading strategy optimization
+2024-12-20 22:18:59,984 - INFO - Establishing baseline performance...
+2024-12-20 22:18:59,989 - ERROR - Error executing strategy: 'return' outside function (OptimalAIstrategy.py, line 175)
+2024-12-20 22:18:59,991 - ERROR - Traceback (most recent call last):
+  File "C:\Users\jonat\AppData\Local\Temp\ipykernel_13048\15729764.py", line 70, in execute_strategy
+    spec.loader.exec_module(optimized_strategy)
+  File "<frozen importlib._bootstrap_external>", line 991, in exec_module
+  File "<frozen importlib._bootstrap_external>", line 1129, in get_code
+  File "<frozen importlib._bootstrap_external>", line 1059, in source_to_code
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "C:\Users\jonat\Asimov\Final Project\OptimalAIstrategy.py", line 175
+    return (rsi_signal and trend_signal and volatility_ok and volume_signal)        
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+SyntaxError: 'return' outside function
+
+2024-12-20 22:18:59,993 - ERROR - Failed to establish baseline performance
+2024-12-20 22:25:56,481 - INFO - Starting trading strategy optimization
+2024-12-20 22:25:56,485 - INFO - Establishing baseline performance...
+2024-12-20 22:25:58,863 - ERROR - Error getting historical data: 'BinanceTrader' object has no attribute 'read_ohlc'
+2024-12-20 22:25:58,864 - ERROR - Error executing strategy: 'BinanceTrader' object has no attribute 'read_ohlc'
+2024-12-20 22:25:58,868 - ERROR - Traceback (most recent call last):
+  File "C:\Users\jonat\AppData\Local\Temp\ipykernel_13104\15729764.py", line 74, in execute_strategy
+    df = get_historical_data(trader)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\jonat\AppData\Local\Temp\ipykernel_13104\15729764.py", line 44, in get_historical_data
+    df = trader.read_ohlc(
+         ^^^^^^^^^^^^^^^^
+AttributeError: 'BinanceTrader' object has no attribute 'read_ohlc'
+
+2024-12-20 22:25:58,869 - ERROR - Failed to establish baseline performance
+2024-12-29 11:57:58,710 - INFO - Binance connection successful
+2024-12-29 11:57:59,185 - INFO - Starting trading strategy optimization
+2024-12-29 11:57:59,186 - ERROR - Critical error in main execution: name 'optimize_strategy' is not defined
+2024-12-29 11:57:59,199 - ERROR - Traceback (most recent call last):
+  File "C:\Users\jonat\AppData\Local\Temp\ipykernel_27128\3019789744.py", line 34, in <module>
+    optimize_strategy('env.json', iterations=5)
+    ^^^^^^^^^^^^^^^^^
+NameError: name 'optimize_strategy' is not defined
+
+2024-12-29 12:10:32,771 - INFO - Starting trading strategy optimization
+2024-12-29 12:10:32,774 - ERROR - Critical error in main execution: 'TradingStrategy' object has no attribute 'optimize_strategy'
+2024-12-29 12:10:32,777 - ERROR - Traceback (most recent call last):
+  File "C:\Users\jonat\AppData\Local\Temp\ipykernel_26144\1859702793.py", line 33, in <module>
+    strategy.optimize_strategy('env.json', iterations=5)
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'TradingStrategy' object has no attribute 'optimize_strategy'
+
+2024-12-29 12:11:49,190 - INFO - Starting trading strategy optimization
+2024-12-29 12:11:49,193 - ERROR - Critical error in main execution: name 'optimize_strategy' is not defined
+2024-12-29 12:11:49,204 - ERROR - Traceback (most recent call last):
+  File "C:\Users\jonat\AppData\Local\Temp\ipykernel_25664\448566621.py", line 33, in <module>
+    optimize_strategy('env.json', iterations=5)
+    ^^^^^^^^^^^^^^^^^
+NameError: name 'optimize_strategy' is not defined
+
+2024-12-29 12:12:08,427 - INFO - Starting trading strategy optimization
+2024-12-29 12:12:08,430 - ERROR - Critical error in main execution: 'TradingStrategy' object has no attribute 'optimize_strategy'
+2024-12-29 12:12:08,433 - ERROR - Traceback (most recent call last):
+  File "C:\Users\jonat\AppData\Local\Temp\ipykernel_25164\1859702793.py", line 33, in <module>
+    strategy.optimize_strategy('env.json', iterations=5)
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'TradingStrategy' object has no attribute 'optimize_strategy'
+
+2024-12-29 12:13:19,308 - INFO - Starting trading strategy optimization
+2024-12-29 12:13:19,311 - ERROR - Critical error in main execution: 'TradingStrategy' object has no attribute 'optimize_strategy'
+2024-12-29 12:13:19,314 - ERROR - Traceback (most recent call last):
+  File "C:\Users\jonat\AppData\Local\Temp\ipykernel_17020\1859702793.py", line 33, in <module>
+    strategy.optimize_strategy('env.json', iterations=5)
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'TradingStrategy' object has no attribute 'optimize_strategy'
+
+2024-12-30 14:44:12,046 - INFO - Starting trading strategy optimization
+2024-12-30 14:44:12,683 - INFO - Binance connection successful
+2024-12-30 14:44:13,291 - INFO - Starting optimization iteration 1/5
+2024-12-30 14:45:05,767 - ERROR - Optimization failed: 'TradingStrategy' object has no attribute 'check_entry_conditions'
+2024-12-30 14:45:05,771 - ERROR - Traceback (most recent call last):
+  File "C:\Users\jonat\Asimov\Final Project\OptimalAIstrategy_OpenAI.py", line 306, in optimize_strategy
+    current_metrics = self.process_trades(df)
+                      ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\jonat\Asimov\Final Project\OptimalAIstrategy_OpenAI.py", line 239, in process_trades
+    trades = self.execute_trades(df)
+             ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\jonat\Asimov\Final Project\OptimalAIstrategy_OpenAI.py", line 263, in execute_trades
+    elif self.check_entry_conditions(current_row, prev_row):
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'TradingStrategy' object has no attribute 'check_entry_conditions'
+
+2025-01-08 10:17:04,035 - INFO - Starting trading strategy optimization
+2025-01-08 10:17:04,879 - INFO - Binance connection successful
+2025-01-08 10:17:05,764 - INFO - Starting optimization iteration 1/5
+2025-01-08 10:19:49,744 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-01-08 10:19:49,889 - ERROR - Failed to initialize OpenAI client: Expecting value: line 1 column 1 (char 0)
+2025-01-08 10:19:49,890 - ERROR - Optimization failed: Expecting value: line 1 column 1 (char 0)
+2025-01-08 10:19:49,905 - ERROR - Traceback (most recent call last):
+  File "C:\Users\jonat\Asimov\Final Project\OptimalAIstrategy_OpenAI.py", line 324, in optimize_strategy
+    new_strategy = TradingStrategy(file_path, self.config)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\jonat\Asimov\Final Project\OptimalAIstrategy_OpenAI.py", line 179, in __init__
+    env = json.load(f)
+          ^^^^^^^^^^^^
+  File "C:\Users\jonat\anaconda3\Lib\json\__init__.py", line 293, in load
+    return loads(fp.read(),
+           ^^^^^^^^^^^^^^^^
+  File "C:\Users\jonat\anaconda3\Lib\json\__init__.py", line 346, in loads
+    return _default_decoder.decode(s)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\jonat\anaconda3\Lib\json\decoder.py", line 337, in decode
+    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\jonat\anaconda3\Lib\json\decoder.py", line 355, in raw_decode
+    raise JSONDecodeError("Expecting value", s, err.value) from None
+json.decoder.JSONDecodeError: Expecting value: line 1 column 1 (char 0)
+
+2025-01-09 03:53:27,450 - ERROR - Failed to initialize OpenAI client: Expecting property name enclosed in double quotes: line 2 column 2 (char 3)
+2025-01-09 03:54:36,272 - ERROR - Failed to initialize OpenAI client: Expecting ',' delimiter: line 3 column 2 (char 90)
+2025-01-09 03:55:24,022 - INFO - Starting trading strategy optimization
+2025-01-09 03:55:24,912 - INFO - Binance connection successful
+2025-01-09 03:55:25,373 - INFO - Starting optimization iteration 1/5
+2025-01-09 03:56:51,035 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-01-09 03:56:51,051 - ERROR - Failed to initialize OpenAI client: Expecting value: line 1 column 1 (char 0)
+2025-01-09 03:56:51,054 - ERROR - Optimization failed: Expecting value: line 1 column 1 (char 0)
+2025-01-09 03:56:51,060 - ERROR - Traceback (most recent call last):
+  File "C:\Users\jonat\Asimov\Final Project\OptimalAIstrategy_OpenAI.py", line 324, in optimize_strategy
+  File "C:\Users\jonat\Asimov\Final Project\OptimalAIstrategy_OpenAI.py", line 179, in __init__
+  File "C:\Users\jonat\anaconda3\Lib\json\__init__.py", line 293, in load
+    return loads(fp.read(),
+           ^^^^^^^^^^^^^^^^
+  File "C:\Users\jonat\anaconda3\Lib\json\__init__.py", line 346, in loads
+    return _default_decoder.decode(s)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\jonat\anaconda3\Lib\json\decoder.py", line 337, in decode
+    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\jonat\anaconda3\Lib\json\decoder.py", line 355, in raw_decode
+    raise JSONDecodeError("Expecting value", s, err.value) from None
+json.decoder.JSONDecodeError: Expecting value: line 1 column 1 (char 0)
+
+2025-01-09 06:11:04,520 - INFO - Starting trading strategy optimization
+2025-01-09 06:11:05,376 - INFO - Binance connection successful
+2025-01-09 06:11:05,684 - INFO - Starting optimization iteration 1/5
+2025-01-09 06:13:44,003 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-01-09 06:13:44,035 - ERROR - Failed to initialize OpenAI client: Expecting value: line 1 column 1 (char 0)
+2025-01-09 06:13:44,038 - ERROR - Optimization failed: Expecting value: line 1 column 1 (char 0)
+2025-01-09 06:13:44,050 - ERROR - Traceback (most recent call last):
+  File "C:\Users\jonat\Asimov\Final Project\OptimalAIstrategy_OpenAI.py", line 324, in optimize_strategy
+  File "C:\Users\jonat\Asimov\Final Project\OptimalAIstrategy_OpenAI.py", line 179, in __init__
+  File "C:\Users\jonat\anaconda3\Lib\json\__init__.py", line 293, in load
+    return loads(fp.read(),
+           ^^^^^^^^^^^^^^^^
+  File "C:\Users\jonat\anaconda3\Lib\json\__init__.py", line 346, in loads
+    return _default_decoder.decode(s)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\jonat\anaconda3\Lib\json\decoder.py", line 337, in decode
+    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\jonat\anaconda3\Lib\json\decoder.py", line 355, in raw_decode
+    raise JSONDecodeError("Expecting value", s, err.value) from None
+json.decoder.JSONDecodeError: Expecting value: line 1 column 1 (char 0)
+
